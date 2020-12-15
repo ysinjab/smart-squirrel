@@ -1,0 +1,78 @@
+alias safari="open -a safari"
+alias firefox="open -a firefox"
+alias opera="open -a opera"
+alias chrome="open -a google\ chrome"
+alias canary="open -a google\ chrome\ canary"
+
+# Launch installed browsers for a specific URL
+# Usage: browsers "http://www.google.com"
+function browsers(){
+    chrome $1
+    opera $1
+    firefox $1
+    safari $1
+}
+
+
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ll='ls -alF'
+
+alias g='git'
+alias gst='git status'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcm='git commit -m'
+alias gamend='git commit -a --amend'
+alias gdeletemerged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
+alias k='kubectl'
+alias ksys='kubectl --namespace=kube-system'
+alias ka='kubectl apply --recursive -f'
+alias ksysa='kubectl --namespace=kube-system apply --recursive -f'
+alias kak='kubectl apply -k'
+alias kk='kubectl kustomize'
+alias kex='kubectl exec -i -t'
+alias ksysex='kubectl --namespace=kube-system exec -i -t'
+alias klo='kubectl logs -f'
+alias ksyslo='kubectl --namespace=kube-system logs -f'
+alias klop='kubectl logs -f -p'
+alias ksyslop='kubectl --namespace=kube-system logs -f -p'
+alias kp='kubectl proxy'
+alias kpf='kubectl port-forward'
+alias kg='kubectl get'
+alias ksysg='kubectl --namespace=kube-system get'
+alias kd='kubectl describe'
+alias ksysd='kubectl --namespace=kube-system describe'
+alias krm='kubectl delete'
+
+# Run server
+alias djrs='python manage.py runserver 0.0.0.0:8000'
+
+# Run shell
+alias djs='python manage.py shell'
+
+# Run tests
+alias djt='python manage.py test'
+
+# Create super user
+alias djsu='python manage.py createsuperuser'
+
+# Load fixture
+alias djl='python manage.py loaddata'
+
+# Django Migrations
+alias djmm='python manage.py makemigrations'
+alias djm='python manage.py migrate'
+alias djmme='python manage.py makemigrations --empty'
+
+# Django Static resources
+alias djcs='python manage.py collectstatic'
+
+alias t=/usr/local/Cellar/go-task/3.0.0/bin/task
+
+# virtualenv python
+alias workoff='deactivate'
